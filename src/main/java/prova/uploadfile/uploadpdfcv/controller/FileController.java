@@ -44,7 +44,7 @@ public class FileController {
     }
     private FileResponse mapToFileResponse(File fileEntity) {
         String downloadURL = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/files/")
+                .path("/files/get/")
                 .path(fileEntity.getId().toString())
                 .toUriString();
         FileResponse fileResponse = new FileResponse();
